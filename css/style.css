@@ -1,0 +1,160 @@
+body{
+  background: rgb(0, 121, 191);
+}
+
+.dndPlaceholder{
+  list-style: none;
+  display: none;
+}
+
+.header {
+  background: rgba(0,0,0,.15);
+  color: white;
+}
+
+.header .btn{
+  cursor: pointer;
+}
+
+.board{
+  padding:20px;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+
+.list{
+  display:inline-block;
+  min-width:300px;
+  max-width: 300px;
+  padding:10px;
+  margin-left: 10px;
+}
+
+.list .list-content{
+  background: #D2D7E5;
+  width: 100%;
+  margin: 0;
+  display: block;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.list .list-content .list_title{
+  background: none;
+  border: none;
+  color: #676363;
+  color: #676363;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.list .list-content .link-add-card{
+  color: #6d6b6b;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.list .list-content .card{
+  background: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.list .list-content .card .text-card{
+  background: none;
+  border: none;
+  resize: none
+}
+
+.list .list-content .list_title:focus{
+  border: 1px solid #676363;
+}
+
+.list .list-content .
+
+.list-content .card{
+  padding: 10px;
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************** Dropzone Styling *****************************/
+
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+.advancedDemo .dropzone ul[dnd-list] {
+    min-height: 42px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.advancedDemo .dropzone li {
+    display: block;
+}
+
+/**
+ * Reduce opacity of elements during the drag operation. This allows the user
+ * to see where he is dropping his element, even if the element is huge. The
+ * .dndDragging class is automatically set during the drag operation.
+ */
+.advancedDemo .dropzone .dndDragging {
+    opacity: 0.7;
+}
+
+/**
+ * The dndDraggingSource class will be applied to the source element of a drag
+ * operation.
+ */
+.advancedDemo .dropzone .dndDraggingSource {
+    opacity: 0.5;
+}
+
+/**
+ * An element with .dndPlaceholder class will be added as child of the dnd-list
+ * while the user is dragging over it.
+ */
+.advancedDemo .dropzone .dndPlaceholder {
+    background-color: #ddd !important;
+    display: block;
+    min-height: 42px;
+}
+
+/***************************** Element type specific styles *****************************/
+
+.advancedDemo .dropzone .itemlist {
+    min-height: 120px !important;
+}
+
+.advancedDemo .dropzone .itemlist > li {
+    background-color: #337ab7;
+    border: none;
+    border-radius: .25em;
+    color: #fff;
+    float: left;
+    font-weight: 700;
+    height: 50px;
+    margin: 5px;
+    padding: 3px;
+    text-align: center;
+    width: 80px;
+}
+
+.advancedDemo .dropzone .container-element {
+    margin: 10px;
+}

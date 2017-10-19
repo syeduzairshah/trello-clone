@@ -1,0 +1,30 @@
+<dic class="list-content">
+    <input type="text" ng-model="list.name" class="list_title form-control">
+    <div dnd-list="list.cards"
+              dnd-allowed-types="['card']"
+              dnd-horizontal-list="true"
+              dnd-external-sources="true"
+              dnd-effect-allowed="{{list.effectAllowed}}"
+              dnd-dragover="dragoverCallback(index, external, type)"
+              dnd-drop="list.dropCallback(index, item, external, type)"
+              dnd-inserted="logListEvent('inserted at', index, external, type)"
+              class="itemlist">
+      <div class="mt-2" ng-repeat="card in list.cards"
+              dnd-draggable="card"
+              dnd-type="'card'"
+              dnd-effect-allowed="{{card.effectAllowed}}"
+              dnd-dragstart="logEvent('Started to drag an item')"
+              dnd-moved="list.cards.splice($index, 1)"
+              dnd-dragend="logEvent('Drag operation ended. Drop effect: ' + dropEffect)"
+                            >
+          <card></card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a href="javascript:void(0)" ng-click="list.addCard()" class="link-add-card">
+          Add a card
+        </a>
+      </div>
+    </div>
+  </dic>

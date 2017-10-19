@@ -1,0 +1,23 @@
+<nav class="navbar navbar-light bg-faded header" ng-click="board.addList()">
+  <a class="navbar-brand" href="#">
+    Trello
+  </a>
+  <btn class="btn btn-primary">+ Add List</btn>
+</nav>
+
+<div class="board d-flex"
+    dnd-list="board.lists"
+    dnd-allowed-types="['list']"
+    dnd-external-sources="true"
+    dnd-drop="board.dropCallback(index, item, external, type, board)">
+
+  <div class="list" ng-repeat="list in board.lists"
+        dnd-draggable="list"
+        dnd-type="'list'"
+        dnd-effect-allowed="copyMove"
+        dnd-moved="board.lists.splice($index, 1)"
+        dnd-callback="list.cards.length"
+  >
+    <list></list>
+  </div>
+</div>

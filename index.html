@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trello Clone</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
+  <script type="text/javascript" src="http://marceljuenemann.github.io/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+  <!-- app -->
+  <script type="text/javascript" src="javascript/app.js"></script>
+
+  <!-- directives -->
+  <script type="text/javascript" src="javascript/directives/list.directive.js"></script>
+  <script type="text/javascript" src="javascript/directives/card.directive.js"></script>
+  <!-- factories -->
+  <script type="text/javascript" src="javascript/factories/card.factory.js"></script>
+  <script type="text/javascript" src="javascript/factories/list.factory.js"></script>
+  <script type="text/javascript" src="javascript/factories/board.factory.js"></script>
+
+  <!-- controller -->
+  <script type="text/javascript" src="javascript/controllers/board.controller.js"></script>
+
+</head>
+<body ng-app="trello">
+  <div ng-view></div>
+</body>
+</html>
